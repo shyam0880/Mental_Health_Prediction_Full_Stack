@@ -1,0 +1,266 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #0b1320;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+  color: white;
+}
+
+.dashboard{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.sidebar{
+  margin: 10px;
+  width: 20%;
+  border-radius: 5px;
+  background: #364152;
+  overflow: hidden;
+}
+
+.mainbar{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mainbar .navbar{
+  position: fixed;
+  top: 0;
+  left: 18.5%;
+  margin: 10px auto;
+  min-width: 81%;
+  min-height: 40px;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr 1.3fr;
+  gap: 10px;
+}
+
+.mainbar .container{
+  margin-top: 57px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.mainbar .navbar .side{
+  background:#364152;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.mainbar .navbar .active{
+  background:#36415295;
+}
+.mainbar .navbar .side:hover{
+  background: #36415295;
+}
+
+.mainbar .navbar .side:nth-child(1){
+  border-radius: 3px;
+  cursor:default ;
+}
+.mainbar .navbar .side:nth-child(1):hover{
+    background:#364152;
+}
+
+/*------------ content ----------*/
+
+.mainbar .content{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.mainbar .content .section{
+  background: #364152;
+  border-radius: 3px;
+  padding: 10px;
+  height: 100px;
+  width: 233px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*------------ content1 ----------*/
+
+.mainbar .content1{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.mainbar .content1 .section6{
+  background: #364152;
+  padding: 10px;
+  grid-row: 1/5;
+  grid-column: 1/2;
+  width: 270px;
+  height: 500px;
+}
+
+.mainbar .content1 .section7{
+  margin: 0 auto;
+  background: #364152;
+  padding: 10px;
+  grid-row: 1/5;
+  grid-column: 2/3;
+  width: 310px;
+  height: 500px;
+}
+.mainbar .content1 .section8{
+  background: #364152;
+  padding: 10px;
+  grid-row: 1/5;
+  grid-column: 3/4;
+  width: 300px;
+  height: 500px;
+}
+.mainbar .content1 .section9{
+  margin: 0 auto;
+  background: #364152;
+  padding: 10px;
+  grid-row: 1/5;
+  grid-column: 4/5;
+  width: 300px;
+  height: 500px;
+}
+
+/*------------ content2 ----------*/
+
+/* .mainbar .content2 {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, auto); 
+  gap: 10px; 
+  position: relative;
+} */
+
+
+.mainbar .content2 .section{
+  background: #364152;
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainbar .content2 {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* 9 columns */
+  grid-template-rows: repeat(8, 1fr);   
+  /* grid-template-rows: repeat(10, minmax(10px, auto));    */
+  gap: 10px;
+  position: relative;
+  /* padding: 10px; */
+  /* background: #1f2937; */
+  border-radius: 4px;
+}
+
+/* Optional: Show visible grid lines for debugging */
+/* .mainbar .content2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) calc(100% / 9),
+      transparent calc(100% / 9),
+      transparent calc(100% / 9 + 1px)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 40px,
+      transparent 40px,
+      transparent 41px
+    );
+  z-index: 0;
+  pointer-events: none;
+} */
+
+/* Default section styles */
+/* .mainbar .content2 > div {
+  background: #085de6;
+  border-radius: 3px;
+  padding: 10px;
+  z-index: 1; 
+  border: 1px dashed rgb(255, 255, 255); 
+} */
+
+/* Section layout positions */
+.mainbar .content2 .section1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.mainbar .content2 .section2 {
+  grid-column: 4 / 6;
+  grid-row: 1 / 2;
+}
+
+.mainbar .content2 .section3 {
+  padding: 0;
+  border: none;
+  grid-column: 6 / 10;
+  grid-row: 1 / 4;
+}
+
+
+.mainbar .content2 .section4 {
+  padding: 0;
+  border: none;
+  grid-column: 1 / 6;
+  grid-row: 2 / 5;
+}
+
+.mainbar .content2 .section5 {
+  grid-column: 6 / 10;
+  grid-row: 4 / 7;
+}
+
+.mainbar .content2 .section6 {
+  grid-column: 1 / 6;
+  grid-row: 5 / 8;
+}
+
+/*------------ content3 ----------*/
+.mainbar .content3{
+  margin: 5px;
+  width: 99%;
+}
+
+/*---------------- topic -------------------*/
+.topic{
+  font-size: 20px;
+  color: #acacac;
+}
+
+.shape{
+  font-size: 30px;
+  margin: 10px 0;
+}
